@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Resume — A4, centered — Updated Icons Rating</title>
+  <style>
+    @page { size: A4; margin: 14mm }
+    :root{ --sheet-w:210mm; --sheet-h:297mm; --left-col:78mm; --gutter:12mm; --text:#0b0b0b; --muted:#6b6b6b }
+    html,body{height:100%;margin:0;background:#efefef;font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color:var(--text)}
+    .viewport{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px}
+    .sheet{width:var(--sheet-w);height:var(--sheet-h);background:#fff;box-shadow:0 12px 36px rgba(0,0,0,0.12);overflow:hidden}
+    .content{height:100%;padding:18mm;box-sizing:border-box;display:grid;grid-template-columns:var(--left-col) 1fr;gap:var(--gutter)}
+
+    .left{border-right:1px solid #111;padding-right:10px;display:flex;flex-direction:column;gap:14px}
+    .avatar{width:100%;height:120px;background:#f4f4f4;border-radius:6px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+    .avatar img{width:100%;height:100%;object-fit:cover}
+    h2.section{font-size:10px;text-transform:uppercase;letter-spacing:1px;margin:0;color:var(--text)}
+    .contact{font-size:12px;line-height:1.45}
+    .pills{display:flex;flex-wrap:wrap;gap:6px}
+    .pill{font-size:11px;padding:6px 8px;border-radius:999px;border:1px solid #111}
+
+    /* Languages keep circles */
+    .lang-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+    .dots{display:inline-flex;gap:6px}
+    .dots span{width:9px;height:9px;border-radius:50%;border:1px solid #111;display:inline-block;background:transparent}
+    .dots .filled{background:#111}
+
+    /* Technologies: icon + five small icons rating */
+    .tech-row{display:flex;flex-direction:column;gap:6px;margin-bottom:6px}
+    .tech-header{display:flex;align-items:center;gap:10px}
+    .tech-header img{width:18px;height:18px;display:inline-block}
+    .tech-name{font-size:12px}
+    .skill-icons{display:flex;gap:6px}
+    .skill-icons img{width:14px;height:14px;display:inline-block;filter:none;opacity:1}
+    .skill-icons img.muted{opacity:0.18}
+
+    .right{padding-left:12px;display:flex;flex-direction:column;gap:12px}
+    .name{font-size:20px;font-weight:700;margin:0}
+    .role{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-top:6px}
+    .about p{font-size:12px;line-height:1.6;margin:6px 0 0}
+    .projects{display:flex;flex-direction:column;gap:10px}
+    .project{padding:10px 12px;border-left:3px solid #111}
+    .project h3{font-size:13px;margin:0}
+    .project p{font-size:12px;margin:6px 0 0;line-height:1.5}
+    .project-links{margin-top:8px;display:flex;gap:8px;flex-wrap:wrap}
+    .project-links a{font-size:12px;text-decoration:none;border:1px solid #111;padding:6px 8px;border-radius:6px}
+    .meta{margin-top:auto;font-size:10px;color:var(--muted)}
+
+    @media print{ html,body{background:white} .sheet{box-shadow:none} .content{padding:0} }
+    @media (max-width:900px){ .content{grid-template-columns:1fr;padding:12px} .left{border-right:none;border-bottom:1px solid #111;padding-bottom:12px} }
+  </style>
+</head>
+<body>
+  <div class="viewport">
+    <div class="sheet">
+      <div class="content">
+
+        <aside class="left" aria-label="Left column">
+          <div class="avatar"><img src="photo.jpg" alt="Profile photo"></div>
+
+          <div class="contact">
+            <h2 class="section">Contact</h2>
+            <div style="margin-top:6px">Name: <strong>Konstantin Ivanov</strong></div>
+            <div>Location: Perm, Russia</div>
+            <div>Phone: +7 (999) 000-00-00</div>
+            <div>Email: <a href="mailto:example@mail.ru">example@mail.ru</a></div>
+            <div>GitHub: <a href="https://github.com/username" target="_blank" rel="noopener">github.com/username</a></div>
+          </div>
+
+          <div>
+            <h2 class="section">Interests</h2>
+            <div class="pills" style="margin-top:6px">
+              <div class="pill">Game Development</div>
+              <div class="pill">IoT</div>
+              <div class="pill">Robotics</div>
+              <div class="pill">Open Source</div>
+            </div>
+          </div>
+
+          <div>
+            <h2 class="section">Languages</h2>
+            <div style="margin-top:6px">
+              <div class="lang-row"><div>Russian</div><div class="dots"><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span></div></div>
+              <div class="lang-row"><div>English</div><div class="dots"><span class="filled"></span><span class="filled"></span><span class="filled"></span><span></span><span></span></div></div>
+            </div>
+          </div>
+
+          <div>
+            <h2 class="section">Programming languages &amp; technologies</h2>
+            <div style="margin-top:6px">
+
+              <!-- Example: Rust with 3/5 proficiency; icons from SimpleIcons CDN repeated 5 times -->
+              <div class="tech-row">
+                <div class="tech-header"><div class="tech-name"><img src="https://cdn.simpleicons.org/rust/000000" alt="Rust"> Rust</div></div>
+                <div class="skill-icons" aria-hidden="true">
+                  <img src="https://cdn.simpleicons.org/rust/000000" alt="icon" class="filled">
+                  <img src="https://cdn.simpleicons.org/rust/000000" alt="icon" class="filled">
+                  <img src="https://cdn.simpleicons.org/rust/000000" alt="icon" class="filled">
+                  <img src="https://cdn.simpleicons.org/rust/000000" alt="icon" class="muted">
+                  <img src="https://cdn.simpleicons.org/rust/000000" alt="icon" class="muted">
+                </div>
+              </div>
+
+              <!-- Go 3/5 -->
+              <div class="tech-row">
+                <div class="tech-header"><div class="tech-name"><img src="https://cdn.simpleicons.org/go/00ADD8" alt="Go"> Go</div></div>
+                <div class="skill-icons" aria-hidden="true">
+                  <img src="https://cdn.simpleicons.org/go/00ADD8" alt="icon" class="filled">
+                  <img src="https://cdn.simpleicons.org/go/00ADD8" alt="icon" class="filled">
+                  <img src="https://cdn.simpleicons.org/go/00ADD8" alt="icon" class="filled">
+                  <img src="https://cdn.simpleicons.org/go/00ADD8" alt="icon" class="muted">
+                  <img src="https://cdn.simpleicons.org/go/00ADD8" alt="icon" class="muted">
+                </div>
+              </div>
+
+              <!-- Go 3/5 -->
+              <div class="tech-row">
+                <div class="tech-header"><div class="tech-name"><img src="https://cdn.simpleicons.org/lua/000080" alt="Lua"> Lua</div></div>
+                <div class="skill-icons" aria-hidden="true">
+                  <img src="https://cdn.simpleicons.org/lua/000080" alt="icon" class="filled">
+                  <img src="https://cdn.simpleicons.org/lua/000080" alt="icon" class="filled">
+                  <img src="https://cdn.simpleicons.org/lua/000080" alt="icon" class="filled">
+                  <img src="https://cdn.simpleicons.org/lua/000080" alt="icon" class="muted">
+                  <img src="https://cdn.simpleicons.org/lua/000080" alt="icon" class="muted">
+                </div>
+              </div>
+
+              <!-- C# 1/5 -->
+              <div class="tech-row">
+                <div class="tech-header"><div class="tech-name"><img src="https://cdn.simpleicons.org/.NET/512BD4" alt="NixOS"> .NET (C#)</div></div>
+                <div class="skill-icons" aria-hidden="true">
+                  <img src="https://cdn.simpleicons.org/.NET/512BD4" alt="icon" class="filled">
+                  <img src="https://cdn.simpleicons.org/.NET/512BD4" alt="icon" class="muted">
+                  <img src="https://cdn.simpleicons.org/.NET/512BD4" alt="icon" class="muted">
+                  <img src="https://cdn.simpleicons.org/.NET/512BD4" alt="icon" class="muted">
+                  <img src="https://cdn.simpleicons.org/.NET/512BD4" alt="icon" class="muted">
+                </div>
+              </div>
+
+              <!-- Go 3/5 -->
+              <div class="tech-row">
+                <div class="tech-header"><div class="tech-name"><img src="https://cdn.simpleicons.org/python/3776AB" alt="Elixir"> Python</div></div>
+                <div class="skill-icons" aria-hidden="true">
+                  <img src="https://cdn.simpleicons.org/python/3776AB" alt="icon" class="filled">
+                  <img src="https://cdn.simpleicons.org/python/3776AB" alt="icon" class="filled">
+                  <img src="https://cdn.simpleicons.org/python/3776AB" alt="icon" class="filled">
+                  <img src="https://cdn.simpleicons.org/python/3776AB" alt="icon" class="muted">
+                  <img src="https://cdn.simpleicons.org/python/3776AB" alt="icon" class="muted">
+                </div>
+              </div>
+
+              <!-- NixOS 1/5 -->
+              <div class="tech-row">
+                <div class="tech-header"><div class="tech-name"><img src="https://cdn.simpleicons.org/nixos/5277C3" alt="NixOS"> NixOS</div></div>
+                <div class="skill-icons" aria-hidden="true">
+                  <img src="https://cdn.simpleicons.org/nixos/5277C3" alt="icon" class="filled">
+                  <img src="https://cdn.simpleicons.org/nixos/5277C3" alt="icon" class="muted">
+                  <img src="https://cdn.simpleicons.org/nixos/5277C3" alt="icon" class="muted">
+                  <img src="https://cdn.simpleicons.org/nixos/5277C3" alt="icon" class="muted">
+                  <img src="https://cdn.simpleicons.org/nixos/5277C3" alt="icon" class="muted">
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="meta">Template: rxresu.me style • A4 • SimpleIcons for tech ratings</div>
+        </aside>
+
+        <main class="right">
+          <header>
+            <div class="name">Konstantin Ivanov</div>
+            <div class="role">Indie Developer · Systems &amp; Game Tools</div>
+          </header>
+
+          <section class="about">
+            <h2 class="section">About</h2>
+            <p>I am an indie developer focused on systems programming and game tools. I work with Rust, Go, and C#. I enjoy building utilities for NixOS and streamlining developer workflows. I aim for pragmatic, maintainable solutions without unnecessary complexity.</p>
+          </section>
+
+          <section class="projects">
+            <h2 class="section">Projects</h2>
+
+            <article class="project">
+              <h3>Project: Nix package builder</h3>
+              <p>Tool for automating local package builds on NixOS. Role: architecture and CLI implementation in Rust.</p>
+              <div class="project-links">
+                <a href="https://github.com/username/nix-builder" target="_blank" rel="noopener">Source</a>
+                <a href="#" target="_blank" rel="noopener">Demo</a>
+              </div>
+            </article>
+
+            <article class="project">
+              <h3>Project: Indie game prototype</h3>
+              <p>Prototype 2D platformer using Lua for game logic and C# for tools.</p>
+              <div class="project-links">
+                <a href="https://github.com/username/indie-game" target="_blank" rel="noopener">Source</a>
+                <a href="#" target="_blank" rel="noopener">Playtest</a>
+              </div>
+            </article>
+
+          </section>
+
+          <section>
+            <h2 class="section">Additional</h2>
+            <p style="font-size:12px;line-height:1.6">Suggestion: include a QR code to your portfolio or PDF, and a short link to a demo video. To change the proficiency level for a technology, replace the number of <code>img</code> elements with class <code>filled</code> (first N) and the rest with <code>muted</code>.</p>
+          </section>
+
+        </main>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>
